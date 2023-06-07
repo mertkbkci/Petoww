@@ -35,6 +35,37 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(id.bottom_navigation);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+
+                    case id.nav_home:
+                        selectorFragment = new HomeFragment();
+                        break;
+
+                    case id.nav_search:
+                        selectorFragment = new SearchFragment();
+                        break;
+
+                    case id.nav_add:
+                        selectorFragment = null;
+                        break;
+
+                    case id.nav_fav:
+                        selectorFragment = new NotificationFragment();
+                        break;
+
+                    case id.nav_person:
+                        selectorFragment = new ProfileFragment();
+                        break;
+                }
+                if (selectorFragment !=null){
+                    getSupportFragmentManager().beginTransaction().replace(id.fragment_container, new HomeFragment()).commit();
+                }
+                return true;
+            }
+        });
 
     }
 
