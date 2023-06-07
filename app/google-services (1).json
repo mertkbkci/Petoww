@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "259892353005",
+    "project_id": "petowappkotlin",
+    "storage_bucket": "petowappkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259892353005:android:d153d20182a79b27c8f9e4",
+        "android_client_info": {
+          "package_name": "com.camerba.petowappkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259892353005-51j5t5gvmapkfeql1qbqbf0nq5gqgqts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camerba.petowappkotlin",
+            "certificate_hash": "14f628b62ba9dad7642ad2bae92dea5e49a16b8d"
+          }
+        },
+        {
+          "client_id": "259892353005-1e36uoibu6hoo32uicq9rnu0sleo6hpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy4YkVUFnw8g_qaitk27r6zOZX46uA3gQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259892353005-1e36uoibu6hoo32uicq9rnu0sleo6hpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
