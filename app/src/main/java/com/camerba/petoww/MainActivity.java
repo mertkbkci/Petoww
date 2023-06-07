@@ -31,41 +31,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        bottomNavigationView = findViewById(id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-
-                    case id.nav_home:
-                        selectorFragment = new HomeFragment();
-                        break;
-
-                    case id.nav_search:
-                        selectorFragment = new SearchFragment();
-                        break;
-
-                    case id.nav_add:
-                        selectorFragment = null;
-                        break;
-
-                    case id.nav_fav:
-                        selectorFragment = new NotificationFragment();
-                        break;
-
-                    case id.nav_person:
-                        selectorFragment = new ProfileFragment();
-                        break;
+                if (item.getItemId() == R.id.nav_home) {
+                    selectorFragment = new HomeFragment();
                 }
-                if (selectorFragment !=null){
-                    getSupportFragmentManager().beginTransaction().replace(id.fragment_container, new HomeFragment()).commit();
+                else if (item.getItemId() == R.id.nav_search) {
+                    selectorFragment = new SearchFragment();
+                }
+                else if (item.getItemId() == R.id.nav_add) {
+                    selectorFragment = null;
+                }
+                else if (item.getItemId() == R.id.nav_fav) {
+                    selectorFragment = new NotificationFragment();
+                }
+                else if (item.getItemId() == R.id.nav_person) {
+                    selectorFragment = new ProfileFragment();
+                }
+
+                if (selectorFragment != null) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectorFragment).commit();
                 }
                 return true;
             }
         });
+
 
     }
 
