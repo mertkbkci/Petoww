@@ -70,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }else if (txtPassword.length() < 6){
                     Toast.makeText(RegisterActivity.this, "Şifre çok kısa!", Toast.LENGTH_SHORT).show();
                 }else {
-                    registerUser(txtUsername, txtName, txtEmail, txtPassword)
+                    registerUser(txtUsername, txtName, txtEmail, txtPassword);
                 }
             }
         });
